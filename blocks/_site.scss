@@ -1,0 +1,180 @@
+.dashboard {
+  display: flex;
+  height: 50vh;
+  overflow: hidden;
+ 
+
+  .sidebar {
+    width: 240px;
+    background-color: #111117;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      font-size: 28px;
+      color: #a974ff;
+      margin-bottom: 40px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      a {
+        text-decoration: none;
+        color: #ccc;
+        font-size: 14px;
+        padding:0;
+        border-radius: 8px;
+        transition: background 0.2s;
+
+        &:hover,
+        &.active {
+          background-color: #2d2d3a;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    background-color: #0e0e12;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1100px;
+      margin-bottom: 40px;
+
+      .site {
+        h1 {
+          margin: 0;
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 13px;
+          color: #888;
+        }
+      }
+
+      .search {
+        padding: 0;
+        border-radius: 8px;
+        border: none;
+        background-color: #1a1a22;
+        color: #fff;
+        width: 200px;
+      }
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+
+      .card {
+        background-color: #16161d;
+        padding: 20px;
+        border-radius: 16px;
+        min-width: 220px;
+        box-sizing: border-box;
+
+        h2 {
+          margin: 0;
+          font-size: 16px;
+        }
+
+        .value {
+          font-size: 24px;
+          font-weight: 600;
+
+          .pos {
+            color: #27d17d;
+            font-size: 14px;
+            margin-left: 10px;
+          }
+
+          .neg {
+            color: #ff5c5c;
+            font-size: 14px;
+            margin-left: 10px;
+          }
+        }
+
+
+        .keywords {
+          padding-left: 18px;
+          margin-top: 10px;
+
+          li {
+            font-size: 13px;
+            color: #bbb;
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .dashboard {
+    flex-direction: column;
+
+    .sidebar {
+      width: 100%;
+      padding: 10px 20px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #111117;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        display: none;
+   
+      }
+
+      &.open {
+        .menu {
+          display: flex;
+        }
+      }
+    }
+
+    .content {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+
+      .cards {
+        flex-direction: column;
+        gap: 15px;
+
+        .card {
+          min-width: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,101 @@
+.seo-section {
+  padding: 0;
+ margin: 0;
+  max-width: 1250px;
+  text-align: center;
+}
+
+.seo-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-bottom: 60px;
+}
+
+.seo-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.seo-card {
+  background-color: #111;
+  border: 1px solid #2b2b2b;
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  text-align: left;
+}
+
+.seo-img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.seo-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.seo-card-text {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.seo-dashboard {
+  position: relative;
+  width: 480px;
+}
+
+.seo-dashboard-img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.seo-dashboard-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+  color: #8c8888;
+}
+
+.seo-dashboard-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.seo-dashboard-text p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .seo-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seo-dashboard {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .seo-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .seo-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
